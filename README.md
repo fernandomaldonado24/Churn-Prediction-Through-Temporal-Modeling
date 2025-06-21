@@ -1,0 +1,2 @@
+# Churn-Prediction-to-Drive-Customer-Retention-Through-Temporal-Behavioral-Modeling
+This project focuses on predicting customer churn using behavioral and temporal features, with the goal of informing proactive retention strategies. A Random Forest model was developed to identify at-risk customers based on patterns in spending, frequency, and product diversity, enabling timely marketing interventions.
