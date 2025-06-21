@@ -27,7 +27,7 @@ This threshold was selected to prioritize recall, as the cost of missing a churn
 ### Top Predictive Features
 The most important predictors of churn were lagged spending and product diversity over recent weeks.
 Features like recency and frequency contributed little and were removed, leading to a simpler and slightly more accurate model.
-### Key Takeaways
+## Key Takeaways
 Churners show early warning signs such as declining spend, low product diversity, and irregular visit frequency. These behavioral shifts can be monitored and used to trigger timely retention efforts.
 
 Non-churners exhibit stable, frequent shopping and increasing variety in their purchases. Encouraging product exploration and maintaining regular engagement can help reinforce loyalty.
