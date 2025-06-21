@@ -7,6 +7,23 @@ The goal of this project is to develop a churn prediction system for FoodCorp in
 To capture meaningful behavioral trends leading up to churn, we engineered a combination of temporal and non-temporal features. Weekly aggregates of spend, frequency, and product diversity were computed using a tumbling window approach, which segmented customer activity into consistent 7-day periods. These four windows formed the input to the model, while churn was defined based on a 35-day output window following a fixed reference date. This structure, shown below, ensured that all predictions were based strictly on past behavior and aligned with real-world deployment.
 ![image](https://github.com/user-attachments/assets/60e9dd89-0775-4346-85f9-d4d9ea57c940)
 
+## Model Evaluation & Feature Selection – Summary
+Three models were evaluated: Random Forest, Logistic Regression, and XGBoost. Random Forest was selected as the final model due to its superior balance of performance and robustness.
+
+Model evaluation used out-of-time validation across five monthly splits, and performance was measured using ROC AUC, suitable for imbalanced classification.
+
+Random Forest: 0.8014 ROC AUC (after tuning)
+
+XGBoost: 0.7920
+
+Logistic Regression: 0.7503
+
+Feature importance analysis showed that recency and frequency-based features had limited value. Removing them slightly improved model performance, resulting in a simpler and equally strong model.
+
+The final model, tuned with grid search (n_estimators=200, max_depth=5, min_samples_split=5), achieved:
+
+Recall: 0.7404 at a threshold of 0.3, prioritizing detection of churners due to their higher business impact.
+
 ## Insights Summary
 In order to evaluate churn prediction performance, we focused on the following key metrics:
 
