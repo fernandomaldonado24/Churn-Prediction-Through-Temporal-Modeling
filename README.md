@@ -3,6 +3,10 @@ The goal of this project is to develop a churn prediction system for FoodCorp in
 ## Dataset Structure
 ![image](https://github.com/user-attachments/assets/07ef2ccc-3e39-42ea-a048-70a4f2fc05e7)
 
+## Feature Engineering Overview
+To capture meaningful behavioral trends leading up to churn, we engineered a combination of temporal and non-temporal features. Weekly aggregates of spend, frequency, and product diversity were computed using a tumbling window approach, which segmented customer activity into consistent 7-day periods. These four windows formed the input to the model, while churn was defined based on a 35-day output window following a fixed reference date. This structure, shown below, ensured that all predictions were based strictly on past behavior and aligned with real-world deployment.
+![image](https://github.com/user-attachments/assets/60e9dd89-0775-4346-85f9-d4d9ea57c940)
+
 ## Insights Summary
 In order to evaluate churn prediction performance, we focused on the following key metrics:
 
