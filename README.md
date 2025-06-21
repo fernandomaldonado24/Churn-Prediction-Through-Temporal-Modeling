@@ -18,19 +18,15 @@ In order to evaluate churn prediction performance, we focused on the following k
 ### Churn Rate
 Churn was defined as 35+ days of inactivity, classifying around 30% of customers as churners.
 This threshold balanced early detection with a practical intervention window, aligning with customer behavior patterns.
-
 ### ROC AUC Score
 The Random Forest model achieved a strong ROC AUC of 0.8014, indicating high predictive power.
 This was slightly higher than both XGBoost (0.7920) and Logistic Regression (0.7503), confirming the strength of tree-based models for this task.
-
 ### Recall at Threshold 0.3
 Using a classification threshold of 0.3, the model correctly identified 74.04% of actual churners.
 This threshold was selected to prioritize recall, as the cost of missing a churner outweighs the cost of a false positive.
-
 ### Top Predictive Features
 The most important predictors of churn were lagged spending and product diversity over recent weeks.
 Features like recency and frequency contributed little and were removed, leading to a simpler and slightly more accurate model.
-
 ### Key Takeaways
 Churners show early warning signs such as declining spend, low product diversity, and irregular visit frequency. These behavioral shifts can be monitored and used to trigger timely retention efforts.
 
